@@ -1,0 +1,130 @@
+body {
+  font-family: 'Verdana';
+  --color-main: #66aaff;
+  --color-light: #cce5ff;
+  --color-lighter: #ebf5ff;
+  --color-on: #ff6666;
+  --color-action: #ffaaaa;
+}
+h1 {
+  font-weight: normal;
+}
+h3 {
+  font-weight: normal;
+  margin: 3px 3px 3px 3px;
+}
+a {
+  color: var(--color-on);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-action);
+}
+.tooltip {
+    display: inline-block;
+    border-bottom: 1px dotted var(--color-action);
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    border: 1px solid var(--color-on);
+    width: 50%;
+    margin-left: -25%;
+    padding: 8px;
+    text-align: left;
+    border-radius: 3px;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.label {
+  display: inline-block;
+  background-color: var(--color-main);
+  padding: 1px;
+  margin: 1px 2px 1px 2px;
+  border-radius: 3px;
+}
+th {
+  border-radius: 3px;
+  background-color: var(--color-main);
+}
+td {
+  text-align: left;
+  padding: 3px;
+  font-weight: normal;
+}
+tr:nth-child(even) {
+  background-color: var(--color-lighter);
+}
+tr:nth-child(odd) {
+  background-color: var(--color-light);
+}
+th.header {
+  font-weight: bold;
+  border-radius: 3px;
+}
+table.tablesorter {
+  margin:10px 0pt 13px;
+  width: 100%;
+  text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+  background-color: var(--color-main);
+  padding: 4px;
+}
+table.tablesorter thead tr .header {
+  padding: 5px 20px 5px 5px;
+  background-image: url(bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+table.tablesorter thead tr .header:hover {
+  background-color: var(--color-action);
+}
+table.tablesorter thead tr .headerSortUp {
+  background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+  background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+  background-color: color-light;
+}
+th.headerSortUp { 
+  background-image: url(asc.png); 
+}
+th.headerSortDown { 
+  background-image: url(desc.png); 
+}
+div.tagsort-subcontainer {
+  padding: 5px 0px 5px 0px;
+  border-top: 2px solid var(--color-main);
+}
+.tagsort-tags-container span {
+  display: inline-block;
+  border: 2px solid var(--color-main);
+  color: var(--color-main);
+  padding: 3px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+.tagsort-tags-container span:hover {
+  border: 2px solid var(--color-action);
+  color: #FFF;
+  background-color: var(--color-action);;
+}
+.tagsort-tags-container span.active {
+  border: 2px solid var(--color-on);
+  color: color-light;
+  background-color: transparent;
+}
+.tagsort-tags-container span.active:hover {
+  border: 2px solid var(--color-main);
+  color: #FFF;
+  background-color: var(--color-main);;
+}

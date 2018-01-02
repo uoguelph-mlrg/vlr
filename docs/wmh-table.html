@@ -1,0 +1,750 @@
+ <html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Papers Table</title>
+  <link href="./css/bibtable.css" rel="stylesheet" type="text/css"></link>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="./js/tagsort-mod.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/jquery.tablesorter.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(function(){$('div.tagsort-tags-container').tagSort({items:'.item', tagElement:'span', tagClassPrefix:false, itemTagsView:'.item-tags', sortType:'exclusive'});});
+    $(document).ready(function(){$("#entries").tablesorter({
+      // initial sorting: col "0", then col "1", both ascending
+      sortList: [[0,0], [1,0]]});
+    });
+  </script>
+</head>
+<body>
+<div style='margin: 2%;'>
+  <div class="container">
+    <h1>WMH Segmentation Papers</h1>                                         <!-- EDIT ME -->
+<!--    Some text to appear before the table.                       --><!-- EDIT ME -->
+    <div class="tagsort-tags-container">                     <!-- EDIT BELOW -->
+      <div class="tagsort-subcontainer">
+        <h3>MRI</h3>
+<span>T1</span><span>IR</span><span>T2</span><span>PD</span><span>FLAIR</span>
+      </div>
+      <div class="tagsort-subcontainer">
+        <h3>Dataset</h3>
+<span>Lupus</span><span>Challenge</span><span>Private</span><span>MRBrainS 2013</span><span>MS 2016</span><span>MS</span><span>Vascular</span><span>ACCORD-MIND</span><span>Dementia</span><span>MS 2008</span><span>Diabetes</span>
+      </div>
+      <div class="tagsort-subcontainer">
+        <h3>Models</h3>
+<span>FSL</span><span>Graph Cuts</span><span>Topological</span><span>N3/4</span><span>Mixture Model</span><span>Outlier</span><span>Trees</span><span>SPM</span><span>K-NN</span><span>FCM</span><span>Bias Corr</span><span>SVM</span><span>Unsupervised</span><span>Neural Net</span><span>Patch</span><span>Edge</span><span>Supervised</span><span>Texture</span><span>Tissue Prior</span><span>MRF</span><span>Log Reg</span><span>Dictionary</span><span>Non-Local Mean</span><span>Threshold</span><span>Regression</span>
+      </div>
+    </div>                                                   <!-- EDIT ABOVE -->
+    <br>
+    <table><tr>
+      <th># Papers: </th><td id='active-item-count'></td>
+    </tr></table>
+    <table id="entries" class="tablesorter">
+    <thead>                                                  <!-- EDIT BELOW -->
+      <th>Year</th>
+      <th>Authors</th>
+      <th>Title</th>
+<!--  <th>Journal</th>-->
+      <th>Abstract</th>
+      <th>MRI</th>
+      <th>Tags / Models</th>
+      <th>Dataset(s)</th>
+      <th>#&nbspSubject</th>
+      <th>#&nbspScanner</th>
+      <th>DSC</th>
+    </thead>                                                 <!-- EDIT ABOVE -->
+    <tbody>
+       <tr class="item" data-item-id="VanLeemput2001" data-item-tags="T1, T2, PD, Unsupervised, Mixture Model, Outlier, Bias Corr, MRF, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2001 </td>
+        <td style="text-align: left;"  > Van Leemput K, Maes F, Vandermeulen D, Colchester A, and Suetens P </td>
+        <td style="text-align: left;"  > Automated segmentation of multiple sclerosis lesions by model outlier detection </td>
+<!--    <td style="text-align: left;"  > IEEE Transactions on Medical Imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">This paper presents a fully automated algorithm for segmentation of multiple sclerosis (MS) lesions from multispectral magnetic resonance (MR) images. The method performs intensity-based tissue classification using a stochastic model for normal brain images and simultaneously detects MS lesions as outliers that are not well explained by the model. It corrects for MR field inhomogeneities, estimates tissue-specific intensity models from the data itself, and incorporates contextual information in the classification using a Markov random field. The results of the automated method are compared with lesion delineations by human experts, showing a high total lesion load correlation. When the degree of spatial correspondence between segmentations is taken into account, considerable disagreement is found, both between expect segmentations, and between expert and automatic measurements.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">Outlier</span><span class="label">Bias Corr</span><span class="label">MRF</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.51 </td>
+      </tr>       <tr class="item" data-item-id="Jack2001" data-item-tags="FLAIR, Unsupervised, Threshold, Private, Dementia" style="display: table-row;">
+        <td style="text-align: center;"> 2001 </td>
+        <td style="text-align: left;"  > Jack C R, OBrien P C, Rettman D W, Shiung M M, Xu Y, Muthupillai R, Manduca A, Avula R, and Erickson B J </td>
+        <td style="text-align: left;"  > FLAIR histogram segmentation for measurement of leukoaraiosis volume </td>
+<!--    <td style="text-align: left;"  > Journal of Magnetic Resonance Imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">The purposes of this study were to develop a method to measure brain and white matter hyperintensity (leukoaraiosis) volume that is based on the segmentation of the intensity histogram of fluid-attenuated inversion recovery (FLAIR) images and to assess the accuracy and reproducibility of the method. Whole-head synthetic image phantoms with manually introduced leukoaraiosis lesions of varying severity were constructed. These synthetic image phantom sets incorporated image contrast and anatomic features that mimicked leukoaraiosis found in real life. One set of synthetic image phantoms was used to develop the segmentation algorithm (FLAIR-histoseg). A second set was used to measure its accuracy. Test retest reproducibility was assessed in 10 elderly volunteers who were imaged twice. The mean absolute error of the FLAIR-histoseg method was 6.6{\%} for measurement of leukoaraiosis volume and 1.4{\%} for brain volume. The mean test retest coefficient of variation was 1.4{\%} for leukoaraiosis volume and 0.3{\%} for brain volume. We conclude that the FLAIR-histoseg method is an accurate and reproducible method for measuring leukoaraiosis and whole-brain volume in elderly subjects.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Threshold</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span> </td>
+        <td style="text-align: center;"> 39 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Zijdenbos2002" data-item-tags="T1, T2, Supervised, Neural Net, Tissue Prior, N3/4, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2002 </td>
+        <td style="text-align: left;"  > Zijdenbos A P, Forghani R, and Evans A C </td>
+        <td style="text-align: left;"  > Automatic pipeline analysis of 3-D MRI data for clinical trials: application to multiple sclerosis </td>
+<!--    <td style="text-align: left;"  > IEEE transactions on medical imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">The quantitative analysis of magnetic resonance imaging (MRI) data has become increasingly important in both research and clinical studies aiming at human brain development, function, and pathology. Inevitably, the role of quantitative image analysis in the evaluation of drug therapy will increase, driven in part by requirements imposed by regulatory agencies. However, the prohibitive length of time involved and the significant intraand inter-rater variability of the measurements obtained from manual analysis of large MRI databases represent major obstacles to the wider application of quantitative MRI analysis. We have developed a fully automatic "pipeline" image analysis framework and have successfully applied it to a number of large-scale, multicenter studies (more than 1,000 MRI scans). This pipeline system is based on robust image processing algorithms, executed in a parallel, distributed fashion. This paper describes the application of this system to the automatic quantification of multiple sclerosis lesion load in MRI, in the context of a phase III clinical trial. The pipeline results were evaluated through an extensive validation study, revealing that the obtained lesion measurements are statistically indistinguishable from those obtained by trained human observers. Given that intra- and inter-rater measurement variability is eliminated by automatic analysis, this system enhances the ability to detect small treatment effects not readily detectable through conventional analysis techniques. While useful for clinical trial analysis in multiple sclerosis, this system holds widespread potential for applications in other neurological disorders, as well as for the study of neurobiology in general.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Neural Net</span><span class="label">Tissue Prior</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 10 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.6 </td>
+      </tr>       <tr class="item" data-item-id="Anbeek2004" data-item-tags="T1, T2, PD, FLAIR, IR, Supervised, K-NN, Private, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2004 </td>
+        <td style="text-align: left;"  > Anbeek P, Vincken K L, van Osch M J P, Bisschops R H C, and van der Grond J </td>
+        <td style="text-align: left;"  > Probabilistic segmentation of white matter lesions in MR imaging </td>
+<!--    <td style="text-align: left;"  > NeuroImage </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">A new method has been developed for fully automated segmentation of white matter lesions (WMLs) in cranial MR imaging. The algorithm uses information from T1-weighted (T1-w), inversion recovery (IR), proton density-weighted (PD), T2-weighted (T2-w) and fluid attenuation inversion recovery (FLAIR) scans. It is based on the K-Nearest Neighbor (KNN) classification technique that builds a feature space from voxel intensities and spatial information. The technique generates images representing the probability per voxel being part of a WML. By application of thresholds on these probability maps, binary segmentations can be obtained. ROC curves show that the segmentations achieve both high sensitivity and specificity. A similarity index (SI), overlap fraction (OF) and extra fraction (EF) are calculated for additional quantitative analysis of the result. The SI is also used for determination of the optimal probability threshold for generation of the binary segmentation. Using probabilistic equivalents of the SI, OF and EF, the probability maps can be evaluated directly, providing a powerful tool for comparison of different classification results. This method for automated WML segmentation reaches an accuracy that is comparable to methods for multiple sclerosis (MS) lesion segmentation and is suitable for detection of WMLs in large and longitudinal population studies.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span><span class="label">IR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">K-NN</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.61 </td>
+      </tr>       <tr class="item" data-item-id="Anbeek2005" data-item-tags="T1, T2, PD, FLAIR, IR, Supervised, K-NN, Private, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2005 </td>
+        <td style="text-align: left;"  > Anbeek P, Vincken K L, van Bochove G S, van Osch M J P, and van der Grond J </td>
+        <td style="text-align: left;"  > Probabilistic segmentation of brain tissue in MR imaging </td>
+<!--    <td style="text-align: left;"  > NeuroImage </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">A new method has been developed for probabilistic segmentation of five different types of brain structures: white matter, gray matter, cerebro-spinal fluid without ventricles, ventricles and white matter lesion in cranial MR imaging. The algorithm is based on information from T1-weighted (T1-w), inversion recovery (IR), proton density-weighted (PD), T2-weighted (T2-w) and fluid attenuation inversion recovery (FLAIR) scans. It uses the K-Nearest Neighbor classification technique that builds a feature space from spatial information and voxel intensities. The technique generates for each tissue type an image representing the probability per voxel being part of it. By application of thresholds on these probability maps, binary segmentations can be obtained. A similarity index (SI) and a probabilistic SI (PSI) were calculated for quantitative evaluation of the results. The influence of each image type on the performance was investigated by alternately leaving out one of the five scan types. This procedure showed that the incorporation of the T1-w, PD or T2-w did not significantly improve the segmentation results. Further investigation indicated that the combination of IR and FLAIR was optimal for segmentation of the five brain tissue types. Evaluation with respect to the gold standard showed that the SI-values for all tissues exceeded 0.8 and all PSI-values exceeded 0.7, implying an excellent agreement.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span><span class="label">IR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">K-NN</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 10 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.78 </td>
+      </tr>       <tr class="item" data-item-id="Admiraal-Behloul2005" data-item-tags="T2, PD, FLAIR, Unsupervised, FCM, Tissue Prior, Private, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2005 </td>
+        <td style="text-align: left;"  > Admiraal-Behloul F, van den Heuvel D, Olofsen H, van Osch M, van der Grond J, van Buchem M, and Reiber J </td>
+        <td style="text-align: left;"  > Fully automatic segmentation of white matter hyperintensities in MR images of the elderly </td>
+<!--    <td style="text-align: left;"  > NeuroImage </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">The role of quantitative image analysis in large clinical trials is continuously increasing. Several methods are available for performing white matter hyperintensity (WMH) volume quantification. They vary in the amount of the human interaction involved. In this paper, we describe a fully automatic segmentation that was used to quantify WMHs in a large clinical trial on elderly subjects. Our segmentation method combines information from 3 different MR images: proton density (PD), T2-weighted and fluid-attenuated inversion recovery (FLAIR) images; our method uses an established artificial intelligent technique (fuzzy inference system) and does not require extensive computations. The reproducibility of the segmentation was evaluated in 9 patients who underwent scan\x{fffd}\x{fffd}\x{fffd}rescan with repositioning; an inter-class correlation coefficient (ICC) of 0.91 was obtained. The effect of differences in image resolution was tested in 44 patients, scanned with 6- and 3-mm slice thickness FLAIR images; we obtained an ICC value of 0.99. The accuracy of the segmentation was evaluated on 100 patients for whom manual delineation of WMHs was available; the obtained ICC was 0.98 and the similarity index was 0.75. Besides the fact that the approach demonstrated very high volumetric and spatial agreement with expert delineation, the software did not require more than 2 min per patient (from loading the images to saving the results) on a Pentium-4 processor (512 MB RAM).</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">FCM</span><span class="label">Tissue Prior</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 100 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.75 </td>
+      </tr>       <tr class="item" data-item-id="Lao2006" data-item-tags="T1, T2, PD, FLAIR, Supervised, SVM, Private, ACCORD-MIND, Vascular, Diabetes" style="display: table-row;">
+        <td style="text-align: center;"> 2006 </td>
+        <td style="text-align: left;"  > Lao Z, Shen D, Jawad A, Karacali B, Melhem E, Bryan R, and Davatziko C </td>
+        <td style="text-align: left;"  > Automated Segmentation of White Matter Lesions in 3D Brain MR Images, using Multivariate Pattern Classification </td>
+<!--    <td style="text-align: left;"  > 3rd IEEE International Symposium on Biomedical Imaging: Macro to Nano, 2006. </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">This paper presents a fully automatic white matter lesion (WML) segmentation method, based on local features determined by combining multiple MR acquisition protocols, including T1-weighted, T2-weighted, proton density (PD)-weighted and fluid attenuation inversion recovery (FLAIR) scans. Support vector machines (SVMs) are used to integrate features from these 4 acquisition types, thereby identifying nonlinear imaging profiles that distinguish and classify WMLs from normal brain tissue. Validation on a population of 45 diabetes patients with diverse spatial and size distribution of WMLs shows the robustness and accuracy of the proposed segmentation method, compared to the manual segmentation results from two experienced neuroradiologists.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">SVM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">ACCORD-MIND</span><span class="label">Vascular</span><span class="label">Diabetes</span> </td>
+        <td style="text-align: center;"> 45 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Wu2006" data-item-tags="T1, T2, PD, Supervised, K-NN, Tissue Prior, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2006 </td>
+        <td style="text-align: left;"  > Wu Y, Warfield S K, Tan I L, Wells W M, Meier D S, van Schijndel R A, Barkhof F, and Guttmann C R G </td>
+        <td style="text-align: left;"  > Automated segmentation of multiple sclerosis lesion subtypes with multichannel MRI </td>
+<!--    <td style="text-align: left;"  > NeuroImage </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Purpose.: To automatically segment multiple sclerosis (MS) lesions into three subtypes (i.e., enhancing lesions, T1 "black holes", T2 hyperintense lesions). Materials and methods.: Proton density-, T2- and contrast-enhanced T1-weighted brain images of 12 MR scans were pre-processed through intracranial cavity (IC) extraction, inhomogeneity correction and intensity normalization. Intensity-based statistical k-nearest neighbor (k-NN) classification was combined with template-driven segmentation and partial volume artifact correction (TDS+) for segmentation of MS lesions subtypes and brain tissue compartments. Operator-supervised tissue sampling and parameter calibration were performed on 2 randomly selected scans and were applied automatically to the remaining 10 scans. Results from this three-channel TDS+ (3ch-TDS+) were compared to those from a previously validated two-channel TDS+ (2ch-TDS+) method. The results of both the 3ch-TDS+ and 2ch-TDS+ were also compared to manual segmentation performed by experts. Results.: Intra-class correlation coefficients (ICC) of 3ch-TDS+ for all three subtypes of lesions were higher (ICC between 0.95 and 0.96) than that of 2ch-TDS+ for T2 lesions (ICC??=??0.82). The 3ch-TDS+ also identified the three lesion subtypes with high specificity (98.7-99.9{\%}) and accuracy (98.5-99.9{\%}). Sensitivity of 3ch-TDS+ for T2 lesions was 16{\%} higher than with 2ch-TDS+. Enhancing lesions were segmented with the best sensitivity (81.9{\%}). "Black holes" were segmented with the least sensitivity (62.3{\%}). Conclusion.: 3ch-TDS+ is a promising method for automated segmentation of MS lesion subtypes. ?? 2006 Elsevier Inc. All rights reserved.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">K-NN</span><span class="label">Tissue Prior</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 12 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Sajja2006" data-item-tags="T2, PD, FLAIR, Supervised, Mixture Model, MRF, SPM, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2006 </td>
+        <td style="text-align: left;"  > Sajja B R, Datta S, He R, Mehta M, Gupta R K, Wolinsky J S, and Narayana P A </td>
+        <td style="text-align: left;"  > Unified approach for multiple sclerosis lesion segmentation on brain MRI </td>
+<!--    <td style="text-align: left;"  > Annals of biomedical engineering </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">The presence of large number of false lesion classification on segmented brain MR images is a major problem in the accurate determination of lesion volumes in multiple sclerosis (MS) brains. In order to minimize the false lesion classifications, a strategy that combines parametric and nonparametric techniques is developed and implemented. This approach uses the information from the proton density (PD)- and T2-weighted and fluid attenuation inversion recovery (FLAIR) images. This strategy involves CSF and lesion classification using the Parzen window classifier. Image processing, morphological operations, and ratio maps of PD- and T2-weighted images are used for minimizing false positives. Contextual information is exploited for minimizing the false negative lesion classifications using hidden Markov random field-expectation maximization (HMRF-EM) algorithm. Lesions are delineated using fuzzy connectivity. The performance of this algorithm is quantitatively evaluated on 23 MS patients. Similarity index, percentages of over, under, and correct estimations of lesions are computed by spatially comparing the results of present procedure with expert manual segmentation. The automated processing scheme detected 80{\%} of the manually segmented lesions in the case of low lesion load and 93{\%} of the lesions in those cases with high lesion load.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Mixture Model</span><span class="label">MRF</span><span class="label">SPM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 23 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.78 </td>
+      </tr>       <tr class="item" data-item-id="Harmouche2006" data-item-tags="T1, T2, PD, Unsupervised, Mixture Model, MRF, Tissue Prior, N3/4, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2006 </td>
+        <td style="text-align: left;"  > Harmouche R, Collins L, Arnold D, Francis S, and Arbel T </td>
+        <td style="text-align: left;"  > Bayesian MS lesion classification modeling regional and local spatial information </td>
+<!--    <td style="text-align: left;"  > Proceedings - International Conference on Pattern Recognition </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">A fully automatic Bayesian framework for multiple sclerosis (MS) lesion classification is presented, using posterior probability distributions and entropy values to classify normal and lesion tissue. Spatial variability in intensities of multimodal MR images over the brain is explicitly modeled by building region-specific multivariate likelihood distributions. Local smoothness is ensured by incorporating neighboring voxel tissue information using Markov Random fields. A probabilistic measure of confidence for the classification is then presented, which can also be used to assess disease burden. The method was tested on 10 patients with MS by comparing automatically classified lesions, with and without regional information, to manual classifications by five expert raters using volume count and overlap. Results improve with the incorporation of spatial information, and are comparable to manual classifications. This method also enables a more accurate classification in the posterior fossa, where no other method reports success.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">MRF</span><span class="label">Tissue Prior</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 10 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.61 </td>
+      </tr>       <tr class="item" data-item-id="Khayati2008" data-item-tags="FLAIR, Unsupervised, Mixture Model, MRF, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2008 </td>
+        <td style="text-align: left;"  > Khayati R, Vafadust M, Towhidkhah F, and Nabavi M </td>
+        <td style="text-align: left;"  > Fully automatic segmentation of multiple sclerosis lesions in brain MR FLAIR images using adaptive mixtures method and Markov random field model </td>
+<!--    <td style="text-align: left;"  > Computers in biology and medicine </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">In this paper, an approach is proposed for fully automatic segmentation of MS lesions in fluid attenuated inversion recovery (FLAIR) Magnetic Resonance (MR) images. The proposed approach, based on a Bayesian classifier, utilizes the adaptive mixtures method (AMM) and Markov random field (MRF) model to obtain and upgrade the class conditional probability density function (CCPDF) and the a priori probability of each class. To compare the performance of the proposed approach with those of previous approaches including manual segmentation, the similarity criteria of different slices related to 20 MS patients were calculated. Also, volumetric comparison of lesions volume between the fully automated segmentation and the gold standard was performed using correlation coefficient (CC). The results showed a better performance for the proposed approach, compared to those of previous works.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">MRF</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.75 </td>
+      </tr>       <tr class="item" data-item-id="Wels2008" data-item-tags="T1, T2, FLAIR, Supervised, Trees, Texture, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2008 </td>
+        <td style="text-align: left;"  > Wels M, Huber M, and Hornegger J </td>
+        <td style="text-align: left;"  > Fully automated segmentation of multiple sclerosis lesions in multispectral MRI </td>
+<!--    <td style="text-align: left;"  > Pattern Recognition and Image Analysis </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">This paper addresses segmentation of multiple sclerosis lesions in multispectral 3-D brain MRI data. For this purpose, we propose a novel fully automated segmentation framework based on probabilistic boosting trees, which is a recently introduced strategy for supervised learning. By using the context of a voxel to be classified and its transformation to an overcomplete set of Haar-like features, it is possible to capture class specific characteristics despite the well-known drawbacks of MR imaging. By successively selecting and combining the most discriminative features during ensemble boosting within a tree structure, the overall procedure is able to learn a discriminative model for voxel classification in terms of posterior probabilities. The final segmentation is obtained after refining the preliminary result by stochastic relaxation and a standard level set approach. A quantitative evaluation within a leave-one-out validation shows the applicability of the proposed method.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Trees</span><span class="label">Texture</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 6 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.57 </td>
+      </tr>       <tr class="item" data-item-id="Herskovits2008" data-item-tags="T1, T2, PD, FLAIR, Supervised, Mixture Model, MRF, FSL, Private, ACCORD-MIND, Vascular, Diabetes" style="display: table-row;">
+        <td style="text-align: center;"> 2008 </td>
+        <td style="text-align: left;"  > Herskovits E H, Bryan R N, and Yang F </td>
+        <td style="text-align: left;"  > Automated Bayesian segmentation of microvascular white-matter lesions in the ACCORD-MIND study. </td>
+<!--    <td style="text-align: left;"  >  </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">PURPOSE: Automatic brain-lesion segmentation has the potential to greatly expand the analysis of the relationships between brain function and lesion locations in large-scale epidemiologic studies, such as the ACCORD-MIND study. In this manuscript we describe the design and evaluation of a Bayesian lesion-segmentation method, with the expectation that our approach would segment white-matter brain lesions in MR images without user intervention. MATERIALS AND METHODS: Each ACCORD-MIND subject has T1-weighted, T2-weighted, spin-density-weighted, and FLAIR sequences. The training portion of our algorithm first registers training images to a standard coordinate space; then, it collects statistics that capture signal-intensity information, and residual spatial variability of normal structures and lesions. The classification portion of our algorithm then uses these statistics to segment lesions in images from new subjects, without the need for user intervention. We evaluated this algorithm using 42 subjects with primarily white-matter lesions from the ACCORD-MIND project. RESULTS: Our experiments demonstrated high classification accuracy, using an expert neuroradiologist as a standard. CONCLUSIONS: A Bayesian lesion-segmentation algorithm that collects multi-channel signal-intensity and spatial information from MR images of the brain shows potential for accurately segmenting brain lesions in images obtained from subjects not used in training.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Mixture Model</span><span class="label">MRF</span><span class="label">FSL</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">ACCORD-MIND</span><span class="label">Vascular</span><span class="label">Diabetes</span> </td>
+        <td style="text-align: center;"> 42 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.6 </td>
+      </tr>       <tr class="item" data-item-id="Dyrby2008" data-item-tags="T1, T2, FLAIR, Supervised, Neural Net, SPM, Private, Dementia" style="display: table-row;">
+        <td style="text-align: center;"> 2008 </td>
+        <td style="text-align: left;"  > Dyrby T B, Rostrup E, Baare W F C, van Straaten E C W, Barkhof F, Vrenken H, Ropele S, Schmidt R, Erkinjuntti T, Wahlund L, Pantoni L, Inzitari D, Paulson O B, Hansen L K, and Waldemar G </td>
+        <td style="text-align: left;"  > Segmentation of age-related white matter changes in a clinical multi-center study. </td>
+<!--    <td style="text-align: left;"  >  </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Age-related white matter changes (WMC) are thought to be a marker of vascular pathology, and have been associated with motor and cognitive deficits. In the present study, an optimized artificial neural network was used as an automatic segmentation method to produce probabilistic maps of WMC in a clinical multi-center study. The neural network uses information from T1- and T2-weighted and fluid attenuation inversion recovery (FLAIR) magnetic resonance (MR) scans, neighboring voxels and spatial location. Generalizability of the neural network was optimized by including the Optimal Brain Damage (OBD) pruning method in the training stage. Six optimized neural networks were produced to investigate the impact of different input information on WMC segmentation. The automatic segmentation method was applied to MR scans of 362 non-demented elderly subjects from 11 centers in the European multi-center study Leukoaraiosis And Disability (LADIS). Semi-manually delineated WMC were used for validating the segmentation produced by the neural networks. The neural network segmentation demonstrated high consistency between subjects and centers, making it a promising technique for large studies. For WMC volumes less than 10 ml, an increasing discrepancy between semi-manual and neural network segmentation was observed using the similarity index (SI) measure. The use of all three image modalities significantly improved cross-center generalizability compared to neural networks using the FLAIR image only. Expert knowledge not available to the neural networks was a minor source of discrepancy, while variation in MR scan quality constituted the largest source of error.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Neural Net</span><span class="label">SPM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span> </td>
+        <td style="text-align: center;"> 362 </td>
+        <td style="text-align: center;"> 10 </td>
+        <td style="text-align: center;"> 0.56 </td>
+      </tr>       <tr class="item" data-item-id="Souplet2008" data-item-tags="T1, T2, FLAIR, Unsupervised, Mixture Model, Threshold, Challenge, MS 2008, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2008 </td>
+        <td style="text-align: left;"  > Souplet J, Lebrun C, Ayache N, and Malandain G </td>
+        <td style="text-align: left;"  > An Automatic Segmentation of T2-FLAIR Multiple Sclerosis Lesions </td>
+<!--    <td style="text-align: left;"  > MICCAI Grand Challenge Workshop: Multiple Sclerosis Lesion Segmentation Challenge </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Multiple sclerosis diagnosis and patient follow-up can be helped by an evaluation of the lesion load in MRI sequences. A lot of automatic methods to segment these lesions are available in the literature. The MICCAI workshop Multiple Sclerosis (MS) lesion segmentation Challenge 08 allows to test and compare these algorithms. This paper presents a method designed to detect hyperintense signal area on T2-FLAIR sequence and its results on the Challenge test data. The proposed algorithm uses only three conventional MRI sequences: T1, T2 and T2-FLAIR. First, images are cropped, spatially unbiased and skull-stripped. A segmentation of the brain into its different compartments is performed on the T1 and the T2 sequences. From these segmentations, a threshold for the T2-FLAIR sequence is automatically computed. Then postprocessing operations select the most plausible lesions in the obtained hyperintense signals. Average global result on the test data (80/100) is close to the inter-expert variability (90/100).</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">Threshold</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 25 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Bricq2008" data-item-tags="T2, FLAIR, Unsupervised, Mixture Model, MRF, Outlier, Challenge, MS 2008, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2008 </td>
+        <td style="text-align: left;"  > Bricq S, Collet C, and Armspach J </td>
+        <td style="text-align: left;"  > MS Lesion Segmentation based on Hidden Markov Chains </td>
+<!--    <td style="text-align: left;"  > The MIDAS Journal - MS Lesion Segmentation (MICCAI 2008 Workshop) </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">In this paper, we present a new automatic robust algorithm to segment$\backslash$nmultimodal brain MR images with Multiple Sclerosis (MS) lesions.$\backslash$nThe method performs tissue classification using a Hidden Markov Chain$\backslash$n(HMC) model and detects MS lesions as outliers to the model. For$\backslash$nthis aim, we use the Trimmed Likelihood Estimator (TLE) to extract$\backslash$noutliers. Furthermore, neighborhood information is included using$\backslash$nthe HMC model and we propose to incorporate a priori information$\backslash$nbrought by a probabilistic atlas.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">MRF</span><span class="label">Outlier</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 25 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Akselrod-Ballin2009" data-item-tags="T1, T2, PD, FLAIR, Supervised, Trees, Texture, SPM, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2009 </td>
+        <td style="text-align: left;"  > Akselrod-Ballin A, Galun M, Gomori J M, Filippi M, Valsasina P, Basri R, and Bradnt A </td>
+        <td style="text-align: left;"  > Automatic Segmentation and Classification of Multiple Sclerosis in Multichannel MRI </td>
+<!--    <td style="text-align: left;"  > IEEE Transactions on Biomedical Engineering </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">We introduce a multiscale approach that combines segmentation with classification to detect abnormal brain structures in medical imagery, and demonstrate its utility in automatically detecting multiple sclerosis (MS) lesions in 3-D multichannel magnetic resonance (MR) images. Our method uses segmentation to obtain a hierarchical decomposition of a multichannel, anisotropic MR scans. It then produces a rich set of features describing the segments in terms of intensity, shape, location, neighborhood relations, and anatomical context. These features are then fed into a decision forest classifier, trained with data labeled by experts, enabling the detection of lesions at all scales. Unlike common approaches that use voxel-by-voxel analysis, our system can utilize regional properties that are often important for characterizing abnormal brain structures. We provide experiments on two types of real MR images: a multichannel proton-density-, T2-, and T1-weighted dataset of 25 MS patients and a single-channel fluid attenuated inversion recovery (FLAIR) dataset of 16 MS patients. Comparing our results with lesion delineation by a human expert and with previously extensively validated results shows the promise of the approach.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Trees</span><span class="label">Texture</span><span class="label">SPM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 41 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.53 </td>
+      </tr>       <tr class="item" data-item-id="DeBoer2009b" data-item-tags="T1, PD, FLAIR, Supervised, Tissue Prior, Threshold, Private, Vascular, Dementia, Diabetes" style="display: table-row;">
+        <td style="text-align: center;"> 2009 </td>
+        <td style="text-align: left;"  > de Boer R, Vrooman H A, van der Lijn F, Vernooij M W, Ikram M A, van der Lugt A, Breteler M M B, and Niessen W J </td>
+        <td style="text-align: left;"  > White matter lesion extension to automatic brain tissue segmentation on MRI </td>
+<!--    <td style="text-align: left;"  > NeuroImage </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">A fully automated brain tissue segmentation method is optimized and extended with white matter lesion segmentation. Cerebrospinal fluid (CSF), gray matter (GM) and white matter (WM) are segmented by an atlas-based k-nearest neighbor classifier on multi-modal magnetic resonance imaging data. This classifier is trained by registering brain atlases to the subject. The resulting GM segmentation is used to automatically find a white matter lesion (WML) threshold in a fluid-attenuated inversion recovery scan. False positive lesions are removed by ensuring that the lesions are within the white matter. The method was visually validated on a set of 209 subjects. No segmentation errors were found in 98{\%} of the brain tissue segmentations and 97{\%} of the WML segmentations. A quantitative evaluation using manual segmentations was performed on a subset of 6 subjects for CSF, GM and WM segmentation and an additional 14 for the WML segmentations. The results indicated that the automatic segmentation accuracy is close to the interobserver variability of manual segmentations.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Tissue Prior</span><span class="label">Threshold</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Vascular</span><span class="label">Dementia</span><span class="label">Diabetes</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.72 </td>
+      </tr>       <tr class="item" data-item-id="Garcia-Lorenzo2009" data-item-tags="T1, T2, PD, Supervised, Mixture Model, Graph Cuts, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2009 </td>
+        <td style="text-align: left;"  > Garcia-Lorenzo D, Lecoeur J, Arnold D L, Collins D L, and Barillot C </td>
+        <td style="text-align: left;"  > Multiple Sclerosis lesion segmentation using an automatic multimodal Graph Cuts </td>
+<!--    <td style="text-align: left;"  >  </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Graph Cuts have been shown as a powerful interactive segmentation technique in several medical domains. We propose to automate the Graph Cuts in order to automatically segment Multiple Sclerosis (MS) lesions in MRI. We replace the manual interaction with a robust EM-based approach in order to discriminate between MS lesions and the Normal Appearing Brain Tissues (NABT). Evaluation is performed in synthetic and real images showing good agreement between the automatic segmentation and the target segmentation. We compare our algorithm with the state of the art techniques and with several manual segmentations. An advantage of our algorithm over previously published ones is the possibility to semi-automatically improve the segmentation due to the Graph Cuts interactive feature.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Mixture Model</span><span class="label">Graph Cuts</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 10 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.63 </td>
+      </tr>       <tr class="item" data-item-id="Schwarz2009" data-item-tags="T1, T2, PD, Supervised, Mixture Model, MRF, Private, Dementia" style="display: table-row;">
+        <td style="text-align: center;"> 2009 </td>
+        <td style="text-align: left;"  > Schwarz C, Fletcher E, Decarli C, and Carmichael O </td>
+        <td style="text-align: left;"  > Fully-automated white matter hyperintensity detection with anatomical prior knowledge and without FLAIR </td>
+<!--    <td style="text-align: left;"  > Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">This paper presents a method for detection of cerebral white matter hyperintensities (WMH) based on run-time PD-, T1-, and T2-weighted structural magnetic resonance (MR) images of the brain along with labeled training examples. Unlike most prior approaches, the method is able to reliably detect WMHs in elderly brains in the absence of fluid-attenuated (FLAIR) images. Its success is due to the learning of probabilistic models of WMH spatial distribution and neighborhood dependencies from ground-truth examples of FLAIR-based WMH detections. These models are combined with a probabilistic model of the PD, T1, and T2 intensities of WMHs in a Markov Random Field (MRF) framework that provides the machinery for inferring the positions of WMHs in novel test images. The method is shown to accurately detect WMHs in a set of 114 elderly subjects from an academic dementia clinic. Experiments show that standard off-the-shelf MRF training and inference methods provide robust results, and that increasing the complexity of neighborhood dependency models does not necessarily help performance. The method is also shown to perform well when training and test data are drawn from distinct scanners and subject pools.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Mixture Model</span><span class="label">MRF</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span> </td>
+        <td style="text-align: center;"> 165 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Gibson2010" data-item-tags="T1, T2, FLAIR, Unsupervised, Threshold, FCM, FSL, Private, Dementia, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2010 </td>
+        <td style="text-align: left;"  > Gibson E, Gao F, Black S E, and Lobaugh N J </td>
+        <td style="text-align: left;"  > Automatic segmentation of white matter hyperintensities in the elderly using FLAIR images at 3T </td>
+<!--    <td style="text-align: left;"  > Journal of Magnetic Resonance Imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">PURPOSE: To determine the precision and accuracy of an automated method for segmenting white matter hyperintensities (WMH) on fast fluid-attenuated inversion-recovery (FLAIR) images in elderly brains at 3T. MATERIALS AND METHODS: FLAIR images from 18 individuals (60-82 years, 9 females) with WMH burdens ranging from 1-80 cm(3) were used. The protocol included the removal of clearly hyperintense voxels; two-class fuzzy C-means clustering (FCM); and thresholding to segment probable WMH. Two false-positive minimization (FPM) methods using white matter templates were tested. Precision was assessed by adding synthetic hyperintense voxels to brain slices. Accuracy was validated by comparing automatic and manual segmentations. Whole-brain, voxel-wise metrics of similarity, under- and overestimation were used to evaluate both precision and accuracy. RESULTS: Precision was high, as the lowest accuracy in the synthetic datasets was 93{\%}. Both FPM strategies successfully improved overall accuracy. Whole-brain accuracy for the FCM segmentation alone ranged from 45{\%}-81{\%}, which improved to 75{\%}-85{\%} using the FPM strategies. CONCLUSION: The method was accurate across the range of WMH burden typically seen in the elderly. Accuracy levels achieved or exceeded those of other approaches using multispectral and/or more sophisticated pattern recognition methods.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Threshold</span><span class="label">FCM</span><span class="label">FSL</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 18 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.81 </td>
+      </tr>       <tr class="item" data-item-id="Shiee2010" data-item-tags="T1, FLAIR, Unsupervised, Topological, Tissue Prior, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2010 </td>
+        <td style="text-align: left;"  > Shiee N, Bazin P, Ozturk A, Reich D S, Calabresi P A, and Pham D L </td>
+        <td style="text-align: left;"  > A topology-preserving approach to the segmentation of brain images with multiple sclerosis lesions </td>
+<!--    <td style="text-align: left;"  > NeuroImage </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">We describe a new fully automatic method for the segmentation of brain images that contain multiple sclerosis white matter lesions. Multichannel magnetic resonance images are used to delineate multiple sclerosis lesions while segmenting the brain into its major structures. The method is an atlas-based segmentation technique employing a topological atlas as well as a statistical atlas. An advantage of this approach is that all segmented structures are topologically constrained, thereby allowing subsequent processing such as cortical unfolding or diffeomorphic shape analysis techniques. Evaluation with both simulated and real data sets demonstrates that the method has an accuracy competitive with state-of-the-art MS lesion segmentation methods, while simultaneously segmenting the whole brain.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Topological</span><span class="label">Tissue Prior</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 10 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.63 </td>
+      </tr>       <tr class="item" data-item-id="Scully2010" data-item-tags="T1, T2, FLAIR, Supervised, SVM, Private, Lupus" style="display: table-row;">
+        <td style="text-align: center;"> 2010 </td>
+        <td style="text-align: left;"  > Scully M, Anderson B, Lane T, Gasparovic C, Magnotta V, Sibbitt W, Roldan C, Kikinis R, and Bockholt H J </td>
+        <td style="text-align: left;"  > An Automated Method for Segmenting White Matter Lesions through Multi-Level Morphometric Feature Classification with Application to Lupus </td>
+<!--    <td style="text-align: left;"  > Frontiers in human neuroscience </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">We demonstrate an automated, multi-level method to segment white matter brain lesions and apply it to lupus. The method makes use of local morphometric features based on multiple MR sequences, including T1-weighted, T2-weighted, and fluid attenuated inversion recovery. After preprocessing, including co-registration, brain extraction, bias correction, and intensity standardization, 49 features are calculated for each brain voxel based on local morphometry. At each level of segmentation a supervised classifier takes advantage of a different subset of the features to conservatively segment lesion voxels, passing on more difficult voxels to the next classifier. This multi-level approach allows for a fast lesion classification method with tunable trade-offs between sensitivity and specificity producing accuracy comparable to a human rater.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">SVM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Lupus</span> </td>
+        <td style="text-align: center;"> 17 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Garcia-Lorenzo2011" data-item-tags="T1, T2, FLAIR, Unsupervised, Mixture Model, Outlier, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2011 </td>
+        <td style="text-align: left;"  > Garcia-Lorenzo D, Prima S, Arnold D L, Collins D L, and Barillot C </td>
+        <td style="text-align: left;"  > Trimmed-likelihood estimation for focal lesions and tissue segmentation in multisequence MRI for multiple sclerosis </td>
+<!--    <td style="text-align: left;"  > IEEE Transactions on Medical Imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">We present a new automatic method for segmentation of multiple sclerosis (MS) lesions in magnetic resonance images. The method performs tissue classification using a model of intensities of the normal appearing brain tissues. In order to estimate the model, a trimmed likelihood estimator is initialized with a hierarchical random approach in order to be robust to MS lesions and other outliers present in real images. The algorithm is first evaluated with simulated images to assess the importance of the robust estimator in presence of outliers. The method is then validated using clinical data in which MS lesions were delineated manually by several experts. Our method obtains an average Dice similarity coefficient (DSC) of 0.65, which is close to the average DSC obtained by raters (0.66).</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">Outlier</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 10 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.65 </td>
+      </tr>       <tr class="item" data-item-id="Geremia2011" data-item-tags="T1, T2, FLAIR, Supervised, Trees, Challenge, MS 2008, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2011 </td>
+        <td style="text-align: left;"  > Geremia E, Clatz O, Menze B H, Konukoglu E, Criminisi A, and Ayache N </td>
+        <td style="text-align: left;"  > Spatial decision forests for MS lesion segmentation in multi-channel magnetic resonance images </td>
+<!--    <td style="text-align: left;"  > NeuroImage </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">A new algorithm is presented for the automatic segmentation of Multiple Sclerosis (MS) lesions in 3D Magnetic Resonance (MR) images. It builds on a discriminative random decision forest framework to provide a voxel-wise probabilistic classification of the volume. The method uses multi-channel MR intensities (T1, T2, and FLAIR), knowledge on tissue classes and long-range spatial context to discriminate lesions from background. A symmetry feature is introduced accounting for the fact that some MS lesions tend to develop in an asymmetric way. Quantitative evaluation of the proposed methods is carried out on publicly available labeled cases from the MICCAI MS Lesion Segmentation Challenge 2008 dataset. When tested on the same data, the presented method compares favorably to all earlier methods. In an a posteriori analysis, we show how selected features during classification can be ranked according to their discriminative power and reveal the most important ones.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Trees</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Smart2011" data-item-tags="T1, FLAIR, Unsupervised, Threshold, SPM, Private, Dementia" style="display: table-row;">
+        <td style="text-align: center;"> 2011 </td>
+        <td style="text-align: left;"  > Smart S D, Firbank M J, and OBrien J T </td>
+        <td style="text-align: left;"  > Validation of automated white matter hyperintensity segmentation </td>
+<!--    <td style="text-align: left;"  > Journal of aging research </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Introduction. White matter hyperintensities (WMHs) are a common finding on MRI scans of older people and are associated with vascular disease. We compared 3 methods for automatically segmenting WMHs from MRI scans. Method. An operator manually segmented WMHs on MRI images from a 3T scanner. The scans were also segmented in a fully automated fashion by three different programmes. The voxel overlap between manual and automated segmentation was compared. Results. Between observer overlap ratio was 63{\%}. Using our previously described in-house software, we had overlap of 62.2{\%}. We investigated the use of a modified version of SPM segmentation; however, this was not successful, with only 14{\%} overlap. Discussion. Using our previously reported software, we demonstrated good segmentation of WMHs in a fully automated fashion.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Threshold</span><span class="label">SPM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span> </td>
+        <td style="text-align: center;"> 30 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Samaille2012" data-item-tags="T1, FLAIR, Unsupervised, Edge, Threshold, Private, Dementia, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2012 </td>
+        <td style="text-align: left;"  > Samaille T, Fillon L, Cuingnet R, Jouvent E, Chabriat H, Dormont D, Colliot O, and Chupin M </td>
+        <td style="text-align: left;"  > Contrast-based fully automatic segmentation of white matter hyperintensities: method and validation </td>
+<!--    <td style="text-align: left;"  > PloS one </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">White matter hyperintensities (WMH) on T2 or FLAIR sequences have been commonly observed on MR images of elderly people. They have been associated with various disorders and have been shown to be a strong risk factor for stroke and dementia. WMH studies usually required visual evaluation of WMH load or time-consuming manual delineation. This paper introduced WHASA (White matter Hyperintensities Automated Segmentation Algorithm), a new method for automatically segmenting WMH from FLAIR and T1 images in multicentre studies. Contrary to previous approaches that were based on intensities, this method relied on contrast: non linear diffusion filtering alternated with watershed segmentation to obtain piecewise constant images with increased contrast between WMH and surroundings tissues. WMH were then selected based on subject dependant automatically computed threshold and anatomical information. WHASA was evaluated on 67 patients from two studies, acquired on six different MRI scanners and displaying a wide range of lesion load. Accuracy of the segmentation was assessed through volume and spatial agreement measures with respect to manual segmentation; an intraclass correlation coefficient (ICC) of 0.96 and a mean similarity index (SI) of 0.72 were obtained. WHASA was compared to four other approaches: Freesurfer and a thresholding approach as unsupervised methods; k-nearest neighbours (kNN) and support vector machines (SVM) as supervised ones. For these latter, influence of the training set was also investigated. WHASA clearly outperformed both unsupervised methods, while performing at least as good as supervised approaches (ICC range: 0.87-0.91 for kNN; 0.89-0.94 for SVM. Mean SI: 0.63-0.71 for kNN, 0.67-0.72 for SVM), and did not need any training set.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Edge</span><span class="label">Threshold</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 67 </td>
+        <td style="text-align: center;"> 6 </td>
+        <td style="text-align: center;"> 0.72 </td>
+      </tr>       <tr class="item" data-item-id="Khademi2012" data-item-tags="FLAIR, Unsupervised, Edge, Threshold, Private, Dementia, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2012 </td>
+        <td style="text-align: left;"  > Khademi A, Venetsanopoulos A, and Moody A R </td>
+        <td style="text-align: left;"  > Robust white matter lesion segmentation in FLAIR MRI </td>
+<!--    <td style="text-align: left;"  > IEEE transactions on bio-medical engineering </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">This paper discusses a white matter lesion (WML) segmentation scheme for fluid attenuation inversion recovery (FLAIR) MRI. The method computes the volume of lesions with subvoxel precision by accounting for the partial volume averaging (PVA) artifact. As WMLs are related to stroke and carotid disease, accurate volume measurements are most important. Manual volume computation is laborious, subjective, time consuming, and error prone. Automated methods are a nice alternative since they quantify WML volumes in an objective, efficient, and reliable manner. PVA is initially modeled with a localized edge strength measure since PVA resides in the boundaries between tissues. This map is computed in 3-D and is transformed to a global representation to increase robustness to noise. Significant edges correspond to PVA voxels, which are used to find the PVA fraction alpha (amount of each tissue present in mixture voxels). Results on simulated and real FLAIR images show high WML segmentation performance compared to ground truth (98.9{\%} and 83{\%} overlap, respectively), which outperforms other methods. Lesion load studies are included that automatically analyze WML volumes for each brain hemisphere separately. This technique does not require any distributional assumptions/parameters or training samples and is applied on a single MR modality, which is a major advantage compared to the traditional methods.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Edge</span><span class="label">Threshold</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 24 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.83 </td>
+      </tr>       <tr class="item" data-item-id="Schmidt2012" data-item-tags="T1, FLAIR, Unsupervised, Mixture Model, MRF, Threshold, SPM, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2012 </td>
+        <td style="text-align: left;"  > Schmidt P, Gaser C, Arsic M, Buck D, Forschler A, Berthele A, Hoshi M, Ilg R, Schmid V J, Zimmer C, Hemmer B, Muhlau M, F"orschler A, and Berthele A </td>
+        <td style="text-align: left;"  > An automated tool for detection of FLAIR-hyperintense white-matter lesions in multiple sclerosis </td>
+<!--    <td style="text-align: left;"  > Neuroimage </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">In Multiple Sclerosis (MS), detection of T2-hyperintense white matter (WM) lesions on magnetic resonance imaging (MRI) has become a crucial criterion for diagnosis and predicting prognosis in early disease. Automated lesion detection is not only desirable with regard to time and cost effectiveness but also constitutes a prerequisite to minimize user bias. Here, we developed and evaluated an algorithm for automated lesion detection requiring a three-dimensional (3D) gradient echo (GRE) T1-weighted and a FLAIR image at 3 Tesla (T). Our tool determines the three tissue classes of gray matter (GM) and WM as well as cerebrospinal fluid (CSF) from the T1-weighted image, and, then, the FLAIR intensity distribution of each tissue class in order to detect outliers, which are interpreted as lesion beliefs. Next, a conservative lesion belief is expanded toward a liberal lesion belief. To this end, neighboring voxels are analyzed and assigned to lesions under certain conditions. This is done iteratively until no further voxels are assigned to lesions. Herein, the likelihood of belonging to WM or GM is weighed against the likelihood of belonging to lesions. We evaluated our algorithm in 53 MS patients with different lesion volumes, in 10 patients with posterior fossa lesions, and 18 control subjects that were all scanned at the same 3T scanner (Achieva, Philips, Netherlands). We found good agreement with lesions determined by manual tracing (R2 values of over 0.93 independent of FLAIR slice thickness up to 6mm). These results require validation with data from other protocols based on a conventional FLAIR sequence and a 3D GRE T1-weighted sequence. Yet, we believe that our tool allows fast and reliable segmentation of FLAIR-hyperintense lesions, which might simplify the quantification of lesions in basic research and even clinical trials.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">MRF</span><span class="label">Threshold</span><span class="label">SPM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 53 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.75 </td>
+      </tr>       <tr class="item" data-item-id="Abdullah2012" data-item-tags="T1, T2, FLAIR, Supervised, SVM, Texture, Challenge, MS 2008, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2012 </td>
+        <td style="text-align: left;"  > Abdullah B a, Younis A a, and John N M </td>
+        <td style="text-align: left;"  > Multi-Sectional Views Textural Based SVM for MS Lesion Segmentation in Multi-Channels MRIs </td>
+<!--    <td style="text-align: left;"  > The open biomedical engineering journal </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">In this paper, a new technique is proposed for automatic segmentation of multiple sclerosis (MS) lesions from brain magnetic resonance imaging (MRI) data. The technique uses a trained support vector machine (SVM) to discriminate between the blocks in regions of MS lesions and the blocks in non-MS lesion regions mainly based on the textural features with aid of the other features. The classification is done on each of the axial, sagittal and coronal sectional brain view independently and the resultant segmentations are aggregated to provide more accurate output segmentation. The main contribution of the proposed technique described in this paper is the use of textural features to detect MS lesions in a fully automated approach that does not rely on manually delineating the MS lesions. In addition, the technique introduces the concept of the multi-sectional view segmentation to produce verified segmentation. The proposed textural-based SVM technique was evaluated using three simulated datasets and more than fifty real MRI datasets. The results were compared with state of the art methods. The obtained results indicate that the proposed method would be viable for use in clinical practice for the detection of MS lesions in MRI.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">SVM</span><span class="label">Texture</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 61 </td>
+        <td style="text-align: center;"> 3 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Sweeney2013" data-item-tags="T1, T2, PD, FLAIR, Supervised, Log Reg, Bias Corr, FSL, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2013 </td>
+        <td style="text-align: left;"  > Sweeney E M, Shinohara R T, Shiee N, Mateen F J, Chudgar A A, Cuzzocreo J L, Calabresi P A, Pham D L, Reich D S, and Crainiceanu C M </td>
+        <td style="text-align: left;"  > OASIS is Automated Statistical Inference for Segmentation, with applications to multiple sclerosis lesion segmentation in MRI </td>
+<!--    <td style="text-align: left;"  > NeuroImage: Clinical </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Magnetic resonance imaging (MRI) can be used to detect lesions in the brains of multiple sclerosis (MS) patients and is essential for diagnosing the disease and monitoring its progression. In practice, lesion load is often quantified by either manual or semi-automated segmentation of MRI, which is time-consuming, costly, and associated with large inter- and intra-observer variability. We propose OASIS is Automated Statistical Inference for Segmentation (OASIS), an automated statistical method for segmenting MS lesions in MRI studies. We use logistic regression models incorporating multiple MRI modalities to estimate voxel-level probabilities of lesion presence. Intensity-normalized T1-weighted, T2-weighted, fluid-attenuated inversion recovery and proton density volumes from 131 MRI studies (98 MS subjects, 33 healthy subjects) with manual lesion segmentations were used to train and validate our model. Within this set, OASIS detected lesions with a partial area under the receiver operating characteristic curve for clinically relevant false positive rates of 1{\%} and below of 0.59{\%} (95{\%} CI; [0.50{\%}, 0.67{\%}]) at the voxel level. An experienced MS neuroradiologist compared these segmentations to those produced by LesionTOADS, an image segmentation software that provides segmentation of both lesions and normal brain structures. For lesions, OASIS out-performed LesionTOADS in 74{\%} (95{\%} CI: [65{\%}, 82{\%}]) of cases for the 98 MS subjects. To further validate the method, we applied OASIS to 169 MRI studies acquired at a separate center. The neuroradiologist again compared the OASIS segmentations to those from LesionTOADS. For lesions, OASIS ranked higher than LesionTOADS in 77{\%} (95{\%} CI: [71{\%}, 83{\%}]) of cases. For a randomly selected subset of 50 of these studies, one additional radiologist and one neurologist also scored the images. Within this set, the neuroradiologist ranked OASIS higher than LesionTOADS in 76{\%} (95{\%} CI: [64{\%}, 88{\%}]) of cases, the neurologist 66{\%} (95{\%} CI: [52{\%}, 78{\%}]) and the radiologist 52{\%} (95{\%} CI: [38{\%}, 66{\%}]). OASIS obtains the estimated probability for each voxel to be part of a lesion by weighting each imaging modality with coefficient weights. These coefficients are explicit, obtained using standard model fitting techniques, and can be reused in other imaging studies. This fully automated method allows sensitive and specific detection of lesion presence and may be rapidly applied to large collections of images. ?? 2013 The Authors.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Log Reg</span><span class="label">Bias Corr</span><span class="label">FSL</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 111 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.61 </td>
+      </tr>       <tr class="item" data-item-id="Datta2013" data-item-tags="T1, T2, FLAIR, Supervised, Mixture Model, MRF, Tissue Prior, FSL, Challenge, MS 2008, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2013 </td>
+        <td style="text-align: left;"  > Datta S, and Narayana P A </td>
+        <td style="text-align: left;"  > A comprehensive approach to the segmentation of multichannel three-dimensional MR brain images in multiple sclerosis </td>
+<!--    <td style="text-align: left;"  > NeuroImage: Clinical </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Accurate classification and quantification of brain tissues is important for monitoring disease progression, measurement of atrophy, and correlating magnetic resonance (MR) measures with clinical disability. Classification of MR brain images in the presence of lesions, such as multiple sclerosis (MS), is particularly challenging. Images obtained with lower resolution often suffer from partial volume averaging leading to false classifications. While partial volume averaging can be reduced by acquiring volumetric images at high resolution, image segmentation and quantification can be technically challenging. In this study, we integrated the brain anatomical knowledge with non-parametric and parametric statistical classifiers for automatically classifying tissues and lesions on high resolution multichannel three-dimensional images acquired on 60 MS brains. The results of automatic lesion segmentation were reviewed by the expert. The agreement between results obtained by the automated analysis and the expert was excellent as assessed by the quantitative metrics, low absolute volume difference percent (36.18\x{fffd}\x{fffd}34.90), low average symmetric surface distance (1.64mm\x{fffd}\x{fffd}1.30mm), high true positive rate (84.75\x{fffd}\x{fffd}12.69), and low false positive rate (34.10\x{fffd}\x{fffd}16.00). The segmented results were also in close agreement with the corrected results as assessed by Bland\x{fffd}\x{fffd}\x{fffd}Altman and regression analyses. Finally, our lesion segmentation was validated using the MS lesion segmentation grand challenge dataset (MICCAI 2008).</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Mixture Model</span><span class="label">MRF</span><span class="label">Tissue Prior</span><span class="label">FSL</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 90 </td>
+        <td style="text-align: center;"> 3 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Steenwijk2013" data-item-tags="T1, FLAIR, Supervised, K-NN, Tissue Prior, FSL, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2013 </td>
+        <td style="text-align: left;"  > Steenwijk M D, Pouwels P J W, Daams M, van Dalen J W, Caan M W A, Richard E, Barkhof F, and Vrenken H </td>
+        <td style="text-align: left;"  > Accurate white matter lesion segmentation by k nearest neighbor classification with tissue type priors (kNN-TTPs) </td>
+<!--    <td style="text-align: left;"  > NeuroImage. Clinical </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">INTRODUCTION: The segmentation and volumetric quantification of white matter (WM) lesions play an important role in monitoring and studying neurological diseases such as multiple sclerosis (MS) or cerebrovascular disease. This is often interactively done using 2D magnetic resonance images. Recent developments in acquisition techniques allow for 3D imaging with much thinner sections, but the large number of images per subject makes manual lesion outlining infeasible. This warrants the need for a reliable automated approach. Here we aimed to improve k nearest neighbor (kNN) classification of WM lesions by optimizing intensity normalization and using spatial tissue type priors (TTPs). METHODS: The kNN-TTP method used kNN classification with 3.0\x{fffd}\x{fffd}T 3DFLAIR and 3DT1 intensities as well as MNI-normalized spatial coordinates as features. Additionally, TTPs were computed by nonlinear registration of data from healthy controls. Intensity features were normalized using variance scaling, robust range normalization or histogram matching. The algorithm was then trained and evaluated using a leave-one-out experiment among 20 patients with MS against a reference segmentation that was created completely manually. The performance of each normalization method was evaluated both with and without TTPs in the feature set. Volumetric agreement was evaluated using intra-class coefficient (ICC), and voxelwise spatial agreement was evaluated using Dice similarity index (SI). Finally, the robustness of the method across different scanners and patient populations was evaluated using an independent sample of elderly subjects with hypertension. RESULTS: The intensity normalization method had a large influence on the segmentation performance, with average SI values ranging from 0.66 to 0.72 when no TTPs were used. Independent of the normalization method, the inclusion of TTPs as features increased performance particularly by reducing the lesion detection error. Best performance was achieved using variance scaled intensity features and including TTPs in the feature set: this yielded ICC\x{fffd}\x{fffd}=\x{fffd}\x{fffd}0.93 and average SI\x{fffd}\x{fffd}=\x{fffd}\x{fffd}0.75\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}0.08. Validation of the method in an independent sample of elderly subjects with hypertension, yielded even higher ICC\x{fffd}\x{fffd}=\x{fffd}\x{fffd}0.96 and SI\x{fffd}\x{fffd}=\x{fffd}\x{fffd}0.84\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}\x{fffd}0.14. CONCLUSION: Adding TTPs increases the performance of kNN based MS lesion segmentation methods. Best performance was achieved using variance scaling for intensity normalization and including TTPs in the feature set, showing excellent agreement with the reference segmentations across a wide range of lesion severity, irrespective of the scanner used or the pathological substrate of the lesions.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">K-NN</span><span class="label">Tissue Prior</span><span class="label">FSL</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 40 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.8 </td>
+      </tr>       <tr class="item" data-item-id="Khademi2014" data-item-tags="FLAIR, Unsupervised, Edge, Threshold, Private, Dementia, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2014 </td>
+        <td style="text-align: left;"  > Khademi A, Venetsanopoulos A, and Moody A R </td>
+        <td style="text-align: left;"  > Generalized method for partial volume estimation and tissue segmentation in cerebral magnetic resonance images </td>
+<!--    <td style="text-align: left;"  > Journal of Medical Imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">An artifact found in magnetic resonance images (MRI) called partial volume averaging (PVA) has received much attention since accurate segmentation of cerebral anatomy and pathology is impeded by this artifact. Traditional neurological segmentation techniques rely on Gaussian mixture models to handle noise and PVA, or high-dimensional feature sets that exploit redundancy in multispectral datasets. Unfortunately, model-based techniques may not be optimal for images with non-Gaussian noise distributions and/or pathology, and multispectral techniques model probabilities instead of the partial volume (PV) fraction. For robust segmentation, a PV fraction estimation approach is developed for cerebral MRI that does not depend on predetermined intensity distribution models or multispectral scans. Instead, the PV fraction is estimated directly from each image using an adaptively defined global edge map constructed by exploiting a relationship between edge content and PVA. The final PVA map is used to segment anatomy and pathology with subvoxel accuracy. Validation on simulated and real, pathology-free T1 MRI (Gaussian noise), as well as pathological fluid attenuation inversion recovery MRI (non-Gaussian noise), demonstrate that the PV fraction is accurately estimated and the resultant segmentation is robust. Comparison to model-based methods further highlight the benefits of the current approach.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Edge</span><span class="label">Threshold</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 25 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.78 </td>
+      </tr>       <tr class="item" data-item-id="Ithapu2014" data-item-tags="T1, FLAIR, Supervised, Trees, SPM, Private, Dementia" style="display: table-row;">
+        <td style="text-align: center;"> 2014 </td>
+        <td style="text-align: left;"  > Ithapu V, Singh V, Lindner C, Austin B P, Hinrichs C, Carlsson C M, Bendlin B B, and Johnson S C </td>
+        <td style="text-align: left;"  > Extracting and summarizing white matter hyperintensities using supervised segmentation methods in Alzheimer's disease risk and aging studies </td>
+<!--    <td style="text-align: left;"  >  </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Precise detection and quantification of white matter hyperintensities (WMH) observed in T2-weighted Fluid Attenuated Inversion Recovery (FLAIR) Magnetic Resonance Images (MRI) is of substantial interest in aging, and age-related neurological disorders such as Alzheimer's disease (AD). This is mainly because WMH may reflect co-morbid neural injury or cerebral vascular disease burden. WMH in the older population may be small, diffuse, and irregular in shape, and sufficiently heterogeneous within and across subjects. Here, we pose hyperintensity detection as a supervised inference problem and adapt two learning models, specifically, Support Vector Machines and Random Forests, for this task. Using texture features engineered by texton filter banks, we provide a suite of effective segmentation methods for this problem. Through extensive evaluations on healthy middle-aged and older adults who vary in AD risk, we show that our methods are reliable and robust in segmenting hyperintense regions. A measure of hyperintensity accumulation, referred to as normalized effective WMH volume, is shown to be associated with dementia in older adults and parental family history in cognitively normal subjects. We provide an open source library for hyperintensity detection and accumulation (interfaced with existing neuroimaging tools), that can be adapted for segmentation problems in other neuroimaging studies.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Trees</span><span class="label">SPM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span> </td>
+        <td style="text-align: center;"> 38 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.67 </td>
+      </tr>       <tr class="item" data-item-id="Yoo2014" data-item-tags="FLAIR, Supervised, Regression, Threshold, SPM, Private, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2014 </td>
+        <td style="text-align: left;"  > Yoo B I, Lee J J, Han J W, Oh S Y W, Lee E Y, MacFall J R, Payne M E, Kim T H, Kim J H, and Kim K W </td>
+        <td style="text-align: left;"  > Application of variable threshold intensity to segmentation for white matter hyperintensities in fluid attenuated inversion recovery magnetic resonance images </td>
+<!--    <td style="text-align: left;"  >  </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">INTRODUCTION: White matter hyperintensities (WMHs) are regions of abnormally high intensity on T2-weighted or fluid-attenuated inversion recovery (FLAIR) magnetic resonance imaging (MRI). Accurate and reproducible automatic segmentation of WMHs is important since WMHs are often seen in the elderly and are associated with various geriatric and psychiatric disorders.$\backslash$n$\backslash$nMETHODS: We developed a fully automated monospectral segmentation method for WMHs using FLAIR MRIs. Through this method, we introduce an optimal threshold intensity (I O ) for segmenting WMHs, which varies with WMHs volume (V WMH), and we establish the I O -V WMH relationship.$\backslash$n$\backslash$nRESULTS: Our method showed accurate validations in volumetric and spatial agreements of automatically segmented WMHs compared with manually segmented WMHs for 32 confirmatory images. Bland-Altman values of volumetric agreement were 0.96 ± 8.311 ml (bias and 95 {\%} confidence interval), and the similarity index of spatial agreement was 0.762 ± 0.127 (mean ± standard deviation). Furthermore, similar validation accuracies were obtained in the images acquired from different scanners.$\backslash$n$\backslash$nCONCLUSIONS: The proposed segmentation method uses only FLAIR MRIs, has the potential to be accurate with images obtained from different scanners, and can be implemented with a fully automated procedure. In our study, validation results were obtained with FLAIR MRIs from only two scanner types. The design of the method may allow its use in large multicenter studies with correct efficiency.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Regression</span><span class="label">Threshold</span><span class="label">SPM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 32 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.76 </td>
+      </tr>       <tr class="item" data-item-id="Harmouche2015" data-item-tags="T1, T2, PD, FLAIR, Unsupervised, Mixture Model, MRF, Tissue Prior, N3/4, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Harmouche R, Subbanna N K, Collins D L, Arnold D L, and Arbel T </td>
+        <td style="text-align: left;"  > Probabilistic multiple sclerosis lesion classification based on modeling regional intensity variability and local neighborhood Information </td>
+<!--    <td style="text-align: left;"  > IEEE Transactions on Biomedical Engineering </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Goal: In this paper, a fully automatic probabilistic method for multiple sclerosis (MS) lesion classification is presented, whereby the posterior probability density function over healthy tissues and two types of lesions (T1-hypointense and T2-hyperintense) is generated at every voxel. Methods: During training, the system explicitly models the spatial variability of the intensity distributions throughout the brain by first segmenting it into distinct anatomical regions and then building regional likelihood distributions for each tissue class based on multimodal magnetic resonance image (MRI) intensities. Local class smoothness is ensured by incorporating neighboring voxel information in the prior probability through Markov random fields. The system is tested on two datasets from real multisite clinical trials consisting of multimodal MRIs from a total of 100 patients with MS. Lesion classification results based on the framework are compared with and without the regional information, as well as with other state-of-The-Art methods against the labels from expert manual raters. The metrics for comparison include Dice overlap, sensitivity, and positive predictive rates for both voxel and lesion classifications. Results: Statistically significant improvements in Dice values ( p {<} 0.01), for voxel-based and lesion-based sensitivity values (p {<} 0.001), and positive predictive rates (p {<} 0.001 and p {<} 0.01 respectively) are shown when the proposed method is compared to the method without regional information, and to a widely used method [1]. This holds particularly true in the posterior fossa, an area where classification is very challenging. Significance: The proposed method allows us to provide clinicians with accurate tissue labels for T1-hypointense and T2-hyperintense lesions, two types of lesions that differ in appearance and clinical ramifications, and with a confidence level in the classification, which helps clinicians assess the classification results.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">MRF</span><span class="label">Tissue Prior</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 100 </td>
+        <td style="text-align: center;"> 35 </td>
+        <td style="text-align: center;"> 0.56 </td>
+      </tr>       <tr class="item" data-item-id="Guizard2015" data-item-tags="T1, T2, PD, FLAIR, Supervised, Non-Local Mean, Patch, N3/4, Private, Challenge, MS 2008, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Guizard N, Coupe P, Fonov V S, Manjon J V, Arnold D L, and Collins D L </td>
+        <td style="text-align: left;"  > Rotation-invariant multi-contrast non-local means for MS lesion segmentation </td>
+<!--    <td style="text-align: left;"  > NeuroImage: Clinical </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Multiple sclerosis (MS) lesion segmentation is crucial for evaluating disease burden, determining disease progression and measuring the impact of new clinical treatments. MS lesions can vary in size, location and intensity, making automatic segmentation challenging. In this paper, we propose a new supervised method to segment MS lesions from 3D magnetic resonance (MR) images using non-local means (NLM). The method uses a multi-channel and rotation-invariant distance measure to account for the diversity of MS lesions. The proposed segmentation method, rotation-invariant multi-contrast non-local means segmentation (RMNMS), captures the MS lesion spatial distribution and can accurately and robustly identify lesions regardless of their orientation, shape or size. An internal validation on a large clinical magnetic resonance imaging (MRI) dataset of MS patients demonstrated a good similarity measure result (Dice similarity = 60.1{\%} and sensitivity = 75.4{\%}), a strong correlation between expert and automatic lesion load volumes (R2 = 0.91), and a strong ability to detect lesions of different sizes and in varying spatial locations (lesion detection rate = 79.8{\%}). On the independent MS Grand Challenge (MSGC) dataset validation, our method provided competitive results with state-of-the-art supervised and unsupervised methods. Qualitative visual and quantitative voxel- and lesion-wise evaluations demonstrated the accuracy of RMNMS method.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Non-Local Mean</span><span class="label">Patch</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 108 </td>
+        <td style="text-align: center;"> 32 </td>
+        <td style="text-align: center;"> 0.6 </td>
+      </tr>       <tr class="item" data-item-id="Jain2015" data-item-tags="T1, FLAIR, Unsupervised, Mixture Model, Bias Corr, MRF, Outlier, Tissue Prior, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Jain S, Sima D M, Ribbens A, Cambron M, Maertens A, Van Hecke W, De Mey J, Barkhof F, Steenwijk M D, Daams M, Maes F, Van Huffel S, Vrenken H, and Smeets D </td>
+        <td style="text-align: left;"  > Automatic segmentation and volumetry of multiple sclerosis brain lesions from MR images </td>
+<!--    <td style="text-align: left;"  > NeuroImage: Clinical </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">The location and extent of white matter lesions on magnetic resonance imaging (MRI) are important criteria for diagnosis, follow-up and prognosis of multiple sclerosis (MS). Clinical trials have shown that quantitative values, such as lesion volumes, are meaningful in MS prognosis. Manual lesion delineation for the segmentation of lesions is, however, time-consuming and suffers from observer variability. In this paper, we propose MSmetrix, an accurate and reliable automatic method for lesion segmentation based on MRI, independent of scanner or acquisition protocol and without requiring any training data. In MSmetrix, 3D T1-weighted and FLAIR MR images are used in a probabilistic model to detect white matter (WM) lesions as an outlier to normal brain while segmenting the brain tissue into grey matter, WM and cerebrospinal fluid. The actual lesion segmentation is performed based on prior knowledge about the location (within WM) and the appearance (hyperintense on FLAIR) of lesions. The accuracy of MSmetrix is evaluated by comparing its output with expert reference segmentations of 20 MRI datasets of MS patients. Spatial overlap (Dice) between the MSmetrix and the expert lesion segmentation is 0.67 \x{fffd}\x{fffd} 0.11. The intraclass correlation coefficient (ICC) equals 0.8 indicating a good volumetric agreement between the MSmetrix and expert labelling. The reproducibility of MSmetrix' lesion volumes is evaluated based on 10 MS patients, scanned twice with a short interval on three different scanners. The agreement between the first and the second scan on each scanner is evaluated through the spatial overlap and absolute lesion volume difference between them. The spatial overlap was 0.69 \x{fffd}\x{fffd} 0.14 and absolute total lesion volume difference between the two scans was 0.54 \x{fffd}\x{fffd} 0.58 ml. Finally, the accuracy and reproducibility of MSmetrix compare favourably with other publicly available MS lesion segmentation algorithms, applied on the same data using default parameter settings.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">Bias Corr</span><span class="label">MRF</span><span class="label">Outlier</span><span class="label">Tissue Prior</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.67 </td>
+      </tr>       <tr class="item" data-item-id="Tomas-Fernandez2015" data-item-tags="T1, T2, FLAIR, Unsupervised, Mixture Model, Graph Cuts, Tissue Prior, Challenge, MS 2008, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Tomas-Fernandez X, and Warfield S K </td>
+        <td style="text-align: left;"  > A model of population and subject (MOPS) intensities with application to multiple sclerosis lesion segmentation </td>
+<!--    <td style="text-align: left;"  > IEEE Transactions on Medical Imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">White matter (WM) lesions are thought to play an important role in multiple sclerosis (MS) disease burden. Recent work in the automated segmentation of white matter lesions from magnetic resonance imaging has utilized a model in which lesions are outliers in the distribution of tissue signal intensities across the entire brain of each patient. However, the sensitivity and specificity of lesion detection and segmentation with these approaches have been inadequate. In our analysis, we determined this is due to the substantial overlap between the whole brain signal intensity distribution of lesions and normal tissue. Inspired by the ability of experts to detect lesions based on their local signal intensity characteristics, we propose a new algorithm that achieves lesion and brain tissue segmentation through simultaneous estimation of a spatially global within-the-subject intensity distribution and a spatially local intensity distribution derived from a healthy reference population. We demonstrate that MS lesions can be segmented as outliers from this intensity model of population and subject. We carried out extensive experiments with both synthetic and clinical data, and compared the performance of our new algorithm to those of state-of-the art techniques. We found this new approach leads to a substantial improvement in the sensitivity and specificity of lesion detection and segmentation.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">Graph Cuts</span><span class="label">Tissue Prior</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 51 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Wang2015" data-item-tags="T1, T2, FLAIR, Unsupervised, Mixture Model, Outlier, FSL, Private, Challenge, MS 2008, Vascular, Dementia, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Wang R, Li C, Wang J, Wei X, Li Y, Zhu Y, and Zhang S </td>
+        <td style="text-align: left;"  > Automatic segmentation and volumetric quantification of white matter hyperintensities on fluid-attenuated inversion recovery images using the extreme value distribution </td>
+<!--    <td style="text-align: left;"  > Neuroradiology </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">INTRODUCTION: This study aims to develop an automatic segmentation framework on the basis of extreme value distribution (EVD) for the detection and volumetric quantification of white matter hyperintensities (WMHs) on fluid-attenuated inversion recovery (FLAIR) images. METHODS: Two EVD-based segmentation methods, namely the Gumbel and Frechet segmentation, were developed to detect WMHs on FLAIR (slice thickness = 5 mm; TR/TE/TI = 11,000/120/2,800 ms; flip angle = 90 degrees ) images. Another automatic segmentation method using a trimmed likelihood estimator (TLE) was implemented for comparison with our proposed segmentation framework. The performances of the three automatic segmentation methods were evaluated by comparing with the manual segmentation method. RESULTS: The Dice similarity coefficients (DSCs) of the two EVD-based segmentation methods were larger than those of the TLE-based segmentation method (Gumbel, 0.823 +/- 0.063; Frechet, 0.843 +/- 0.057; TLE, 0.817 +/- 0.068), demonstrating that the EVD-based segmentation outperformed the TLE-based segmentation. The Frechet segmentation obtained larger DSCs on patients with moderate to severe lesion loads and a comparable performance on patients with mild lesion loads, indicating that the Frechet segmentation was superior to the Gumbel segmentation. The Gumbel segmentation underestimated the lesion volumes of all patients, whereas the Frechet and TLE-based segmentation methods obtained overestimated lesion volumes (Manual, 13.71 +/- 14.02 cc; Gumbel, 12.73 +/- 13.21 cc; Frechet, 13.88 +/- 13.96 cc; TLE, 13.54 +/- 12.27 cc). Moreover, the EVD-based segmentation was demonstrated to be comparable to other state-of-the-art methods on a publicly available dataset. CONCLUSION: The proposed EVD-based segmentation framework is a promising, effective, and convenient tool for volumetric quantification and further study of WMHs in aging and dementia.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">Outlier</span><span class="label">FSL</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">Vascular</span><span class="label">Dementia</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 70 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.84 </td>
+      </tr>       <tr class="item" data-item-id="Roy2015" data-item-tags="FLAIR, Supervised, Trees, MRF, Tissue Prior, FSL, SPM, Private, Challenge, MS 2008, Vascular, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Roy P K, Bhuiyan A, Janke A, Desmond P M, Wong T Y, Abhayaratna W P, Storey E, and Ramamohanarao K </td>
+        <td style="text-align: left;"  > Automatic white matter lesion segmentation using contrast enhanced FLAIR intensity and Markov Random Field </td>
+<!--    <td style="text-align: left;"  > Computerized medical imaging and graphics : the official journal of the Computerized Medical Imaging Society </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">White matter lesions (WMLs) are small groups of dead cells that clump together in the white matter of brain. In this paper, we propose a reliable method to automatically segment WMLs. Our method uses a novel filter to enhance the intensity of WMLs. Then a feature set containing enhanced intensity, anatomical and spatial information is used to train a random forest classifier for the initial segmentation of WMLs. Following that a reliable and robust edge potential function based Markov Random Field (MRF) is proposed to obtain the final segmentation by removing false positive WMLs. Quantitative evaluation of the proposed method is performed on 24 subjects of ENVISion study. The segmentation results are validated against the manual segmentation, performed under the supervision of an expert neuroradiologist. The results show a dice similarity index of 0.76 for severe lesion load, 0.73 for moderate lesion load and 0.61 for mild lesion load. In addition to that we have compared our method with three state of the art methods on 20 subjects of Medical Image Computing and Computer Aided Intervention Society's (MICCAI's) MS lesion challenge dataset, where our method shows better segmentation accuracy compare to the state of the art methods. These results indicate that the proposed method can assist the neuroradiologists in assessing the WMLs in clinical practice.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Trees</span><span class="label">MRF</span><span class="label">Tissue Prior</span><span class="label">FSL</span><span class="label">SPM</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">Vascular</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 38 </td>
+        <td style="text-align: center;"> 3 </td>
+        <td style="text-align: center;"> 0.56 </td>
+      </tr>       <tr class="item" data-item-id="Brosch2015" data-item-tags="T1, T2, FLAIR, Supervised, Neural Net, Patch, Challenge, MS 2008, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Brosch T, Yoo Y, Tang L Y W, Li D K B, Traboulsee A, and Tam R </td>
+        <td style="text-align: left;"  > Deep Convolutional Encoder Networks for Multiple Sclerosis Lesion Segmentation </td>
+<!--    <td style="text-align: left;"  > Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">We present an approach for segmenting low- and high-grade gliomas in multimodal magnetic resonance imaging volumes. The proposed approach is based on a hybrid generative-discriminative model. Firstly, a generative approach based on an Expectation-Maximization framework that incorporates a glioma growth model is used to segment the brain scans into tumor, as well as healthy tissue labels. Secondly, a gradient boosting multi-class classification scheme is used to refine tumor labels based on information from multiple patients. Lastly, a probabilistic Bayesian strategy is employed to further refine and finalize the tumor segmentation based on patient-specific intensity statistics from the multiple modalities. We evaluated our approach in 186 cases during the training phase of the BRAin Tumor Segmentation (BRATS) 2015 challenge and report promising results. During the testing phase, the algorithm was additionally evaluated in 53 unseen cases, achieving the best performance among the competing methods.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Neural Net</span><span class="label">Patch</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.36 </td>
+      </tr>       <tr class="item" data-item-id="Fartaria2015" data-item-tags="FLAIR, Supervised, K-NN, Tissue Prior, N3/4, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Fartaria M J, Bonnier G, Roche A, Kober T, Meuli R, Rotzinger D, Frackowiak R, Schluep M, Du Pasquier R, Thiran J, Krueger G, Bach Cuadra M, and Granziera C </td>
+        <td style="text-align: left;"  > Automated detection of white matter and cortical lesions in early stages of multiple sclerosis </td>
+<!--    <td style="text-align: left;"  > Journal of magnetic resonance imaging : JMRI </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">PURPOSE: To develop a method to automatically detect multiple sclerosis (MS) lesions, located both in white matter (WM) and in the cortex, in patients with low disability and early disease stage. MATERIALS AND METHODS: We developed a lesion detection method, based on the k-nearest neighbor (k-NN) technique, to detect lesions as small as 0.0036 mL. This method uses the image intensity information from up to four different 3D magnetic resonance imaging (MRI) sequences (magnetization-prepared rapid gradient-echo, MPRAGE; magnetization-prepared two inversion-contrast rapid gradient-echo, MP2RAGE; 3D fluid-attenuated inversion recovery, FLAIR; and 3D double-inversion recovery, DIR), acquired on a 3T scanner. To these intensity features we added the information obtained by the spatial coordinates and tissue prior probabilities provided by the International Consortium for Brain Mapping (ICBM). Quantitative assessment was done in 39 early-stage MS patients with a "leave-one-out" cross-validation. RESULTS: The best lesion detection rate (DR) performance in WM was obtained using MP2RAGE, FLAIR, and DIR intensities (77{\%} for lesions \x{fffd}\x{fffd}\x{fffd}0.0036 mL; 85{\%} for lesions \x{fffd}\x{fffd}\x{fffd}0.005 mL). Similar results were obtained excluding the DIR intensity as well as when using only MPRAGE and FLAIR (DR = 75{\%}, P = 0.5720). However, the combination of FLAIR with DIR and MP2RAGE appeared to be the best for detecting cortical lesions (DR = 62{\%}), compared to the other combination of sequences (P {<} 0.001). CONCLUSION: For WM lesion detection, similar results were observed when only conventional clinical sequences (FLAIR, MPRAGE) were used compared to a combination of conventional and "advanced" sequences (MP2RAGE, DIR). Cortical lesion detection increased significantly when "advanced" sequences were used. J. Magn. Reson. Imaging 2015.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">K-NN</span><span class="label">Tissue Prior</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 39 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.55 </td>
+      </tr>       <tr class="item" data-item-id="Deshpande2015" data-item-tags="T1, T2, PD, FLAIR, Supervised, Patch, Dictionary, Private, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Deshpande H, Maurel P, and Barillot C </td>
+        <td style="text-align: left;"  > Classification of multiple sclerosis lesions using adaptive dictionary learning </td>
+<!--    <td style="text-align: left;"  > Computerized Medical Imaging and Graphics </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">This paper presents a sparse representation and an adaptive dictionary learning based method for automated classification of multiple sclerosis (MS) lesions in magnetic resonance (MR) images. Manual delineation of MS lesions is a time-consuming task, requiring neuroradiology experts to analyze huge volume of MR data. This, in addition to the high intra- and inter-observer variability necessitates the requirement of automated MS lesion classification methods. Among many image representation models and classification methods that can be used for such purpose, we investigate the use of sparse modeling. In the recent years, sparse representation has evolved as a tool in modeling data using a few basis elements of an over-complete dictionary and has found applications in many image processing tasks including classification. We propose a supervised classification approach by learning dictionaries specific to the lesions and individual healthy brain tissues, which include white matter (WM), gray matter (GM) and cerebrospinal fluid (CSF). The size of the dictionaries learned for each class plays a major role in data representation but it is an even more crucial element in the case of competitive classification. Our approach adapts the size of the dictionary for each class, depending on the complexity of the underlying data. The algorithm is validated using 52 multi-sequence MR images acquired from 13 MS patients. The results demonstrate the effectiveness of our approach in MS lesion classification.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">PD</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Patch</span><span class="label">Dictionary</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 52 </td>
+        <td style="text-align: center;"> 1 </td>
+        <td style="text-align: center;"> 0.5 </td>
+      </tr>       <tr class="item" data-item-id="Roura2015" data-item-tags="T1, FLAIR, Unsupervised, Mixture Model, Outlier, Threshold, SPM, FSL, N3/4, Private, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2015 </td>
+        <td style="text-align: left;"  > Roura E, Oliver A, Cabezas M, Valverde S, Pareto D, Vilanova J C, Ramio-Torrenta L, Rovira A, and Llado X </td>
+        <td style="text-align: left;"  > A toolbox for multiple sclerosis lesion segmentation </td>
+<!--    <td style="text-align: left;"  >  </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">INTRODUCTION: Lesion segmentation plays an important role in the diagnosis and follow-up of multiple sclerosis (MS). This task is very time-consuming and subject to intra- and inter-rater variability. In this paper, we present a new tool for automated MS lesion segmentation using T1w and fluid-attenuated inversion recovery (FLAIR) images. METHODS: Our approach is based on two main steps, initial brain tissue segmentation according to the gray matter (GM), white matter (WM), and cerebrospinal fluid (CSF) performed in T1w images, followed by a second step where the lesions are segmented as outliers to the normal apparent GM brain tissue on the FLAIR image. RESULTS: The tool has been validated using data from more than 100 MS patients acquired with different scanners and at different magnetic field strengths. Quantitative evaluation provided a better performance in terms of precision while maintaining similar results on sensitivity and Dice similarity measures compared with those of other approaches. CONCLUSION: Our tool is implemented as a publicly available SPM8/12 extension that can be used by both the medical and research communities.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">Outlier</span><span class="label">Threshold</span><span class="label">SPM</span><span class="label">FSL</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.34 </td>
+      </tr>       <tr class="item" data-item-id="Knight2016a" data-item-tags="FLAIR, Unsupervised, Edge, Threshold, Challenge, MS 2016, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2016 </td>
+        <td style="text-align: left;"  > Knight J, and Khademi A </td>
+        <td style="text-align: left;"  > MS Lesion Segmentation Using FLAIR MRI Only </td>
+<!--    <td style="text-align: left;"  > Medical Image Computing and Computer-Assisted Intervention - MICCAI </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">There have been many efforts to automate segmentation of MS lesions in brain MRI, since human delineation is time consuming and error prone. However, most existing methods require multiple coregistered MR sequences, tissue priors or parametric models, and are rarely validated on multi-scanner image databases. In this work, a fast, FLAIR-only lesion segmentation algorithm is proposed, that does not use tissue priors or parametric models. The method uses an edge-based model of partial volume averaging to estimate fuzzy membership profiles of tissue classes. Results are further refined using an upstream image standardization pipeline, and downstream post processing. Lesion segmentation performance is measured on 15 volumes from three different scanners, demonstrating the robustness of the approach.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Edge</span><span class="label">Threshold</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2016</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 15 </td>
+        <td style="text-align: center;"> 3 </td>
+        <td style="text-align: center;"> 0.7 </td>
+      </tr>       <tr class="item" data-item-id="Mechrez2016" data-item-tags="T1, T2, FLAIR, Supervised, Non-Local Mean, Patch, N3/4, Challenge, MS 2008, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2016 </td>
+        <td style="text-align: left;"  > Mechrez R, Goldberger J, and Greenspan H </td>
+        <td style="text-align: left;"  > Patch-Based Segmentation with Spatial Consistency: Application to MS Lesions in Brain MRI </td>
+<!--    <td style="text-align: left;"  > International Journal of Biomedical Imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">This paper presents an automatic lesion segmentation method based on similarities between multichannel patches. A patch database is built using training images for which the label maps are known. For each patch in the testing image, k similar patches are retrieved from the database. The matching labels for these k patches are then combined to produce an initial segmentation map for the test case. Finally an iterative patch-based label refinement process based on the initial segmentation map is performed to ensure the spatial consistency of the detected lesions. The method was evaluated in experiments on multiple sclerosis (MS) lesion segmentation in magnetic resonance images (MRI) of the brain. An evaluation was done for each image in the MICCAI 2008 MS lesion segmentation challenge. Results are shown to compete with the state of the art in the challenge. We conclude that the proposed algorithm for segmentation of lesions provides a promising new approach for local segmentation and global detection in medical images.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Non-Local Mean</span><span class="label">Patch</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.31 </td>
+      </tr>       <tr class="item" data-item-id="Strumia2016" data-item-tags="T1, FLAIR, Unsupervised, Mixture Model, Topological, Graph Cuts, Private, Challenge, MS 2008, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2016 </td>
+        <td style="text-align: left;"  > Strumia M, Schmidt F, Anastasopoulos C, Granziera C, Krueger G, and Brox T </td>
+        <td style="text-align: left;"  > White Matter MS-Lesion Segmentation Using a Geometric Brain Model </td>
+<!--    <td style="text-align: left;"  > IEEE transactions on medical imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Brain magnetic resonance imaging (MRI) in patients with Multiple Sclerosis (MS) shows regions of signal abnormalities, named plaques or lesions. The spatial lesion distribution plays a major role for MS diagnosis. In this paper we present a 3D MS-lesion segmentation method based on an adaptive geometric brain model. We model the topological properties of the lesions and brain tissues in order to constrain the lesion segmentation to the white matter. As a result, the method is independent of an MRI atlas. We tested our method on the MICCAI MS grand challenge proposed in 2008 and achieved competitive results. In addition, we used an in-house dataset of 15 MS patients, for which we achieved best results in most distances in comparison to atlas based methods. Besides classical segmentation distances, we motivate and formulate a new distance to evaluate the quality of the lesion segmentation, while being robust with respect to minor inconsistencies at the boundary level of the ground truth annotation.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">Mixture Model</span><span class="label">Topological</span><span class="label">Graph Cuts</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Challenge</span><span class="label">MS 2008</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 20 </td>
+        <td style="text-align: center;"> 3 </td>
+        <td style="text-align: center;"> 0.52 </td>
+      </tr>       <tr class="item" data-item-id="Griffanti2016" data-item-tags="T1, FLAIR, Supervised, K-NN, Patch, FSL, Private, Dementia, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2016 </td>
+        <td style="text-align: left;"  > Griffanti L, Zamboni G, Khan A, Li L, Bonifacio G, Sundaresan V, Schulz U G, Kuker W, Battaglini M, Rothwell P M, and Jenkinson M </td>
+        <td style="text-align: left;"  > BIANCA (Brain Intensity AbNormality Alassification Algorithm): A new tool for automated segmentation of white matter hyperintensities </td>
+<!--    <td style="text-align: left;"  >  </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Reliable quantification of white matter hyperintensities of presumed vascular origin (WMHs) is increasingly needed, given the presence of these MRI findings in patients with several neurological and vascular disorders, as well as in elderly healthy subjects. We present BIANCA (Brain Intensity AbNormality Classification Algorithm), a fully automated, supervised method for WMH detection, based on the k-nearest neighbour (k-NN) algorithm. Relative to previous k-NN based segmentation methods, BIANCA offers different options for weighting the spatial information, local spatial intensity averaging, and different options for the choice of the number and location of the training points. BIANCA is multimodal and highly flexible so that the user can adapt the tool to their protocol and specific needs. We optimised and validated BIANCA on two datasets with different MRI protocols and patient populations (a “predominantly neurodegenerative” and a “predominantly vascular” cohort). BIANCA was first optimised on a subset of images for each dataset in terms of overlap and volumetric agreement with a manually segmented WMH mask. The correlation between the volumes extracted with BIANCA (using the optimised set of options), the volumes extracted from the manual masks and visual ratings showed that BIANCA is a valid alternative to manual segmentation. The optimised set of options was then applied to the whole cohorts and the resulting WMH volume estimates showed good correlations with visual ratings and with age. Finally, we performed a reproducibility test, to evaluate the robustness of BIANCA, and compared BIANCA performance against existing methods. Our findings suggest that BIANCA, which will be freely available as part of the FSL package, is a reliable method for automated WMH segmentation in large cross-sectional cohort studies.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">K-NN</span><span class="label">Patch</span><span class="label">FSL</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 130 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.76 </td>
+      </tr>       <tr class="item" data-item-id="Valverde2016" data-item-tags="T1, FLAIR, Unsupervised, FCM, Tissue Prior, SPM, N3/4, Private, Challenge, MRBrainS 2013, MS, Vascular" style="display: table-row;">
+        <td style="text-align: center;"> 2017 </td>
+        <td style="text-align: left;"  > Valverde S, Oliver A, Roura E, Gonzalez-vill`a S, Pareto D, Vilanova J C, Ramio-torrent`a L, Rovira , and Llado X </td>
+        <td style="text-align: left;"  > Automated tissue segmentation of MR brain images in the presence of white matter lesions </td>
+<!--    <td style="text-align: left;"  > Medical Image Analysis </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Over the last few years, the increasing interest in brain tissue volume measurements on clinical settings has led to the development of a wide number of automated tissue segmentation methods. However, white matter lesions are known to reduce the performance of automated tissue segmentation methods, which requires manual annotation of the lesions and refilling them before segmentation, which is tedious and time-consuming. Here, we propose a new, fully automated T1-w/FLAIR tissue segmentation approach designed to deal with images in the presence of WM lesions. This approach integrates a robust partial volume tissue segmentation with WM outlier rejection and filling, combining intensity and probabilistic and morphological prior maps. We evaluate the performance of this method on the MRBrainS13 tissue segmentation challenge database, which contains images with vascular WM lesions, and also on a set of Multiple Sclerosis (MS) patient images. On both databases, we validate the performance of our method with other state-of-the-art techniques. On the MRBrainS13 data, the presented approach was at the time of submission the best ranked unsupervised intensity model method of the challenge (7th position) and clearly outperformed the other unsupervised pipelines such as FAST and SPM12. On MS data, the differences in tissue segmentation between the images segmented with our method and the same images where manual expert annotations were used to refill lesions on T1-w images before segmentation were lower or similar to the best state-of-the-art pipeline incorporating automated lesion segmentation and filling. Our results show that the proposed pipeline achieved very competitive results on both vascular and MS lesions. A public version of this approach is available to download for the neuro-imaging community.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Unsupervised</span><span class="label">FCM</span><span class="label">Tissue Prior</span><span class="label">SPM</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Challenge</span><span class="label">MRBrainS 2013</span><span class="label">MS</span><span class="label">Vascular</span> </td>
+        <td style="text-align: center;"> 33 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;">  </td>
+      </tr>       <tr class="item" data-item-id="Dadar2017" data-item-tags="T1, FLAIR, Supervised, Regression, Threshold, Tissue Prior, N3/4, Private, Dementia" style="display: table-row;">
+        <td style="text-align: center;"> 2017 </td>
+        <td style="text-align: left;"  > Dadar M, Pascoal T, Manitsirikul S, Misquitta K, Tartaglia C, Brietner J, Rosa-Neto P, Carmichael O, DeCarli C, and Collins D L </td>
+        <td style="text-align: left;"  > Validation of a Regression Technique for Segmentation of White Matter Hyperintensities in Alzheimer's Disease </td>
+<!--    <td style="text-align: left;"  > IEEE Transactions on Medical Imaging </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">Segmentation and volumetric quantification of white matter hyperintensities (WMHs) is essential in assessment and monitoring of the vascular burden in aging and Alzheimer's disease (AD), especially when considering their effect on cognition. Manually segmenting WMHs in large cohorts is technically unfeasible due to time and accuracy concerns. Automated tools that can detect WMHs robustly and with high accuracy are needed. Here we present and validate a fully automatic technique for segmentation and volumetric quantification of WMHs in aging and AD. The proposed technique combines intensity and location features from multiple magnetic resonance imaging (MRI) contrasts and manually labeled training data with a linear classifier to perform fast and robust segmentations. It provides both a continuous subject specific WMH map reflecting different levels of tissue damage and binary segmentations. The method was used to detect WMHs in 80 elderly/AD brains (ADC dataset) as well as 40 healthy subjects at risk of AD (PREVENT-AD dataset). Robustness across different scanners was validated using 10 subjects from ADNI2/GO study. Voxel-wise and volumetric agreements were evaluated using Dice similarity index (SI) and intra-class correlation (ICC), yielding ICC=0.96, SI=0.62\x{fffd}\x{fffd}0.16 for ADC dataset and ICC=0.78, SI=0.51\x{fffd}\x{fffd}0.15 for PREVENT-AD dataset. The proposed method was robust in the independent sample yielding SI=0.64\x{fffd}\x{fffd}0.17 with ICC=0.93 for ADNI2/GO subjects. The proposed method provides fast, accurate and robust segmentations on previously unseen data from different models of scanners, making it ideal to study WMHs in large scale multi-site studies</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Regression</span><span class="label">Threshold</span><span class="label">Tissue Prior</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Dementia</span> </td>
+        <td style="text-align: center;"> 80 </td>
+        <td style="text-align: center;"> 3 </td>
+        <td style="text-align: center;"> 0.62 </td>
+      </tr>       <tr class="item" data-item-id="Zhan2017" data-item-tags="T1, T2, FLAIR, Supervised, Log Reg, MRF, FSL, N3/4, Private, Challenge, ACCORD-MIND, MS 2008, Vascular, MS, Diabetes, MS" style="display: table-row;">
+        <td style="text-align: center;"> 2017 </td>
+        <td style="text-align: left;"  > Zhan T, Yu R, Zheng Y, Zhan Y, Xiao L, and Wei Z </td>
+        <td style="text-align: left;"  > Multimodal spatial-based segmentation framework for white matter lesions in multi-sequence magnetic resonance images </td>
+<!--    <td style="text-align: left;"  > Biomedical Signal Processing and Control </td> -->
+        <td style="text-align: center;"> <div class="tooltip">Abstract
+                                         <span class="tooltiptext">OBJECTIVE Multi-sequence magnetic resonance (MR) imaging is a frequently used method for characterising and quantifying white matter (WM) lesions in the human brain. The number and size of lesions are commonly determined to assess the diseases in clinical settings. Accurate WM lesion segmentation is very important for disease diagnosis and progression surveillance. The goal of this paper is to present an approach for improving WM lesion segmentation accuracy. METHODS In this paper, we propose a novel method integrating the multi-sequence and spatial information in a Bayesian framework for WM lesion detection from multi-sequence human brain magnetic resonance images (MRIs). The entire framework is based on a three-step approach: First, a multinomial logistic regression (MLR) algorithm is used to assess the conditional probability distributions of intensities in WM lesions and brain tissues from training data. Second, the spatial information previously given by a Markov random field (MRF) prior is integrated with multimodal information in the Bayesian framework to strengthen the spatial constraint. This step is especially effective when WM lesions have intensity values similar to those of other brain tissues. Finally, a post-processing step based on biological knowledge is used to remove some false positives. RESULTS Our method is validated using two datasets. The experimental results show that our algorithm agrees well with manual expert labelling and indicate that our multimodal spatial-based method offers a significant advantage over other approaches. CONCLUSIONS A three-step approach for combining multimodal and spatial information is proposed for WM lesion segmentation. The advantages of this approach are discussed, and a practical application to two datasets is presented.</span></div></td>
+        <td style="text-align: left;"  > <span class="label">T1</span><span class="label">T2</span><span class="label">FLAIR</span> </td>
+        <td style="text-align: left;"  > <span class="label">Supervised</span><span class="label">Log Reg</span><span class="label">MRF</span><span class="label">FSL</span><span class="label">N3/4</span> </td>
+        <td style="text-align: left;"  > <span class="label">Private</span><span class="label">Challenge</span><span class="label">ACCORD-MIND</span><span class="label">MS 2008</span><span class="label">Vascular</span><span class="label">MS</span><span class="label">Diabetes</span><span class="label">MS</span> </td>
+        <td style="text-align: center;"> 50 </td>
+        <td style="text-align: center;"> 2 </td>
+        <td style="text-align: center;"> 0.76 </td>
+      </tr>
+    </tbody>
+    </table>
+    Please send comments & suggestions to: <a href=mailto:jesse.x.knight@gmail.com>Jesse Knight</a>                        <!-- EDIT ME -->
+  </div>
+</div>
+</body>
+</html>
