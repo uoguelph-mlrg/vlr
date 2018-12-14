@@ -1,6 +1,10 @@
 # MSSEG: MS Lesion Segmentation
 
-Here is the MATLAB code related to the MASc Thesis and paper (TBD) by Jesse Knight 
+Here is the MATLAB code related to the
+[MASc Thesis](http://hdl.handle.net/10214/12142)
+and
+[paper](https://doi.org/10.1016/j.mri.2018.06.009)
+by Jesse Knight 
 
 This readme best viewed in
 [git markup](https://jbt.github.io/markdown-editor/).
